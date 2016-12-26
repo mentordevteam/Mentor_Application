@@ -1,0 +1,112 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment_seller_main"
+    android:orientation="vertical"
+    android:background="#e2e2e2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_margin="5sp"
+            android:background="@android:color/white">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0sp"
+                android:src="@mipmap/ic_add_new_product"
+                android:id="@+id/image_view_add_new_products"
+                android:contentDescription="@string/add_new_products"
+                android:layout_weight="3"
+                android:layout_margin="20sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0sp"
+                android:text="@string/add_new_products"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:padding="10sp"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_margin="5sp"
+            android:background="@android:color/white">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0sp"
+                android:src="@mipmap/ic_add_new_shop"
+                android:id="@+id/image_view_add_new_shop"
+                android:contentDescription="@string/add_new_shop"
+                android:layout_weight="3"
+                android:layout_margin="20sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0sp"
+                android:text="@string/add_new_shop"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:padding="10sp"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_weight="1"
+        android:layout_margin="5sp"
+        android:orientation="vertical"
+        android:background="@android:color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_of_pending_request"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/text_view_seller_pending_request"
+                android:layout_centerVertical="true"
+                android:textSize="22sp"
+                android:textColor="@android:color/black"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_of_request_accepted"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/text_view_seller_accepted_request"
+                android:textSize="22sp"
+                android:textColor="@android:color/black"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

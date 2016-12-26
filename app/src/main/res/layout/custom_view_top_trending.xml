@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="200sp"
+    android:layout_height="wrap_content"
+    android:layout_margin="10sp"
+    android:layout_marginLeft="3sp"
+    android:layout_marginRight="3sp"
+    android:background="@drawable/custom_recycler_view">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10sp"
+        android:textStyle="bold"
+        android:id="@+id/text_view_title_vertical_recycler"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10sp"
+        android:id="@+id/text_view_shop_name_recycler_view"/>
+
+    <ImageView
+        android:layout_width="150sp"
+        android:layout_height="150sp"
+        android:layout_gravity="center"
+        android:contentDescription="@string/image_view_recycler_view"
+        android:id="@+id/image_view_recycler_view"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/view_product"
+        android:id="@+id/button_recycler_view"
+        android:background="@android:color/darker_gray"/>
+</LinearLayout>

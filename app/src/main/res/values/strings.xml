@@ -1,0 +1,79 @@
+<resources>
+    <string name="app_name">Mentor</string>
+    <string name="mentor">MENTOR</string>
+    <string name="welcome_to_mentor">Welcome to Mentor</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">LOGIN</string>
+    <string name="if_your_a_new_user_signup_here">New to Mentor?  Sign up now!</string>
+    <string name="email_id">Email id</string>
+    <string name="sign_up_for_free">Sign up</string>
+    <string name="phone_number">Mobile No</string>
+    <string name="retype_password">Retype password</string>
+    <string name="are_you_existing_user_login_here">Are you existing user.. Login here</string>
+    <string name="signup">Signup</string>
+    <string name="computer_store">Computer Store</string>
+    <string name="store_locator">Store locator</string>
+    <string name="transport">Transport</string>
+    <string name="stationary">Stationary</string>
+    <string name="home_appliances">Home appliances</string>
+    <string name="books">Books</string>
+    <string name="food_and_beverages">Foods</string>
+    <string name="mobile_sales_and_services">Mobile</string>
+    <string name="entertainment">Entertainment</string>
+    <string name="others">Others</string>
+    <string name="sticker_shop">Online sticker shop</string>
+    <string name="second_hand_deals">Second hand deals</string>
+    <string name="search_here">Search here..</string>
+    <string name="second_hand_market">Second Hand Market</string>
+    <string name="shop_online">ONLINE SHOP</string>
+    <string name="custom_toast">custom toast</string>
+    <string name="image_view_recycler_view">image view recycler view</string>
+    <string name="view_product">view product</string>
+    <string name="top_trending">Top trending :</string>
+    <string name="switch_as_a_dealer">Switch as a seller</string>
+    <string name="online_shop">Online shop</string>
+
+    <string-array name="names">
+        <item>waseem</item>
+        <item>waseem</item>
+        <item>waseem</item>
+        <item>waseem</item>
+        <item>waseem</item>
+        <item>waseem</item>
+        <item>waseem</item>
+        <item>waseem</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="view_products">View Products</string>
+    <string name="upload_image">Upload_Image</string>
+    <string name="upload_profile_picture">Upload Profile picture</string>
+    <string name="city_name">city name</string>
+    <string name="city">City</string>
+    <string name="proceed">Proceed</string>
+    <string name="state">State</string>
+    <string name="n_a">N/A</string>
+    <string name="state_name">state name</string>
+    <string name="home">Home</string>
+    <string name="showing_results_for">Showing results for</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
+    <string name="add_new_products">Add new products</string>
+    <string name="add_new_shop">Add new shop</string>
+    <string name="no_of_pending_request">No of pending request</string>
+    <string name="no_of_request_accepted">No of request accepted</string>
+    <string name="product_name">Product Name</string>
+    <string name="shop_name_or_owner_name">Shop name (or) Owner name</string>
+    <string name="price">Price</string>
+    <string name="dummy_price">0.00 INR</string>
+    <string name="rating">Rating</string>
+    <string name="_4_0">4.0</string>
+    <string name="switch_to_user">Switch to user</string>
+    <string name="my_shops">My shops</string>
+    <string name="settings">Settings</string>
+    <string name="profile">Profile</string>
+    <string name="log_out">Log out</string>
+    <string name="main">Main</string>
+</resources>

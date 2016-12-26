@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/custom_toast_layout"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:layout_width="70sp"
+        android:layout_height="70sp"
+        android:id="@+id/image_view_toast"
+        android:src="@mipmap/logo_face"
+        android:contentDescription="@string/custom_toast"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_view_custom_toast"
+        android:contentDescription="@string/custom_toast"
+        android:text="@string/custom_toast"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/background_dark"
+        android:layout_toRightOf="@+id/image_view_toast"
+        android:layout_toEndOf="@+id/image_view_toast"
+        android:layout_marginTop="25sp"/>
+
+    <ImageView
+        android:layout_width="70sp"
+        android:layout_height="70sp"
+        android:layout_toRightOf="@+id/text_view_custom_toast"
+        android:layout_toEndOf="@id/text_view_custom_toast"
+        android:src="@mipmap/logo_face"
+        android:contentDescription="@string/custom_toast"/>
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/main">
+        <menu>
+            <item android:title="@string/view_products"
+                android:id="@+id/nav_seller_view_products"
+                android:icon="@mipmap/ic_nav_view_product"/>
+            <item android:title="@string/switch_to_user"
+                android:icon="@mipmap/ic_nav_user"
+                android:id="@+id/nav_seller_switch_to_user"/>
+            <item android:title="@string/my_shops"
+                android:id="@+id/nav_seller_my_shops"
+                android:icon="@mipmap/ic_nav_shops"/>
+        </menu>
+    </item>
+
+    <item android:title="@string/others">
+        <menu>
+            <item android:title="@string/settings"
+                android:id="@+id/nav_header_settings"
+                android:icon="@mipmap/ic_nav_settings"/>
+
+            <item android:title="@string/profile"
+                android:id="@+id/nav_header_profile"
+                android:icon="@mipmap/ic_nav_profile"/>
+
+            <item android:title="@string/log_out"
+                android:id="@+id/nav_header_logout"
+                android:icon="@mipmap/ic_nav_logout"/>
+        </menu>
+    </item>
+</menu>
