@@ -27,8 +27,8 @@ public class Fragment_search_results extends Fragment {
     {
         View v = inflater.inflate(R.layout.fragment_search_results, container, false);
         view=v;
-        String search=((Home)getActivity()).search_text;
-        ((Home)getActivity()).search_text="";
+        String search=((MainActivity)getActivity()).search_text;
+        ((MainActivity)getActivity()).search_text="";
         TextView textView= (TextView) v.findViewById(R.id.text_view_search_result_show);
         textView.setText(search);
         display_results(search);

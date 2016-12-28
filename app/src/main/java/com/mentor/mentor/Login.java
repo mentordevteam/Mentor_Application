@@ -50,7 +50,7 @@ public class Login extends AppCompatActivity
 
                 new com.mentor.mentor.SharedPreferences(getApplicationContext()).set("login_status","yes");
 
-                Intent i=new Intent(getApplicationContext(),Home.class);
+                Intent i=new Intent(getApplicationContext(),MainActivity.class);
                 startActivity(i);
                 finish();
             }

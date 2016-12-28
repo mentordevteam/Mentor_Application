@@ -26,7 +26,6 @@
         <activity
             android:name=".Signup"
             android:theme="@style/FullscreenTheme" />
-        <activity android:name=".Home" />
         <activity android:name=".Profile_finish" />
         <activity android:name=".Seller" />
         <activity android:name=".MainActivity"/>

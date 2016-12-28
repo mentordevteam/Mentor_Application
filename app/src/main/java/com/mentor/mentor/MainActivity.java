@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     ActionBarDrawerToggle toggle;
 
     FragmentTransaction fragmentTransaction;
+
+    String search_text="";
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
