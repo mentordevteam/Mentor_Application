@@ -28,7 +28,8 @@
             android:theme="@style/FullscreenTheme" />
         <activity android:name=".Profile_finish" />
         <activity android:name=".Seller" />
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".security_pin"></activity>
     </application>
 
 </manifest>

@@ -79,4 +79,6 @@
     <string name="pin_lock">Pin Lock</string>
     <string name="lock_your_app_with_secret_pin">Lock your app with secret pin</string>
     <string name="change_password">Change Password</string>
+    <string name="like">Likes</string>
+    <string name="_0">0</string>
 </resources>

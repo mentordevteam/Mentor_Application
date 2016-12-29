@@ -131,4 +131,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         });
         alertDialog.show();
     }
+
+    public void go_to_news_feed(View view) {
+        fragmentTransaction=getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.main_drawer_layout,new Fragment_news_feed(),"News Feed").commit();
+    }
 }

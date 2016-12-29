@@ -72,7 +72,7 @@ public class Fragment_home extends Fragment
         private ArrayList<String> product;
         private ArrayList<Integer> image;
 
-        public DataAdapter(Context context,ArrayList<String> title,ArrayList<String> product,ArrayList<Integer> image)
+        DataAdapter(Context context,ArrayList<String> title,ArrayList<String> product,ArrayList<Integer> image)
         {
             this.context = context;
             this.title=title;
@@ -81,7 +81,8 @@ public class Fragment_home extends Fragment
         }
 
         @Override
-        public DataAdapter.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
+        public DataAdapter.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i)
+        {
             View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.custom_view_top_trending, viewGroup, false);
             return new ViewHolder(view);
         }
@@ -89,7 +90,7 @@ public class Fragment_home extends Fragment
         @Override
         public void onBindViewHolder(DataAdapter.ViewHolder viewHolder, int i)
         {
-            viewHolder.textView_title.setText(product.get(i));
+            viewHolder.textView_title.setText(title.get(i));
             viewHolder.textView_shopname.setText(product.get(i));
             viewHolder.imageView_product_image.setImageResource(image.get(i));
         }
@@ -99,11 +100,11 @@ public class Fragment_home extends Fragment
             return title.size();
         }
 
-        public class ViewHolder extends RecyclerView.ViewHolder{
+        class ViewHolder extends RecyclerView.ViewHolder{
             private TextView textView_title;
             private TextView textView_shopname;
             private ImageView imageView_product_image;
-            public ViewHolder(View view) {
+            ViewHolder(View view) {
                 super(view);
 
                 textView_shopname= (TextView) view.findViewById(R.id.text_view_shop_name_recycler_view);
@@ -111,6 +112,5 @@ public class Fragment_home extends Fragment
                 imageView_product_image= (ImageView) view.findViewById(R.id.image_view_recycler_view);
             }
         }
-
     }
 }
