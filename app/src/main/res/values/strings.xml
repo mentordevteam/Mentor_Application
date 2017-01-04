@@ -50,8 +50,8 @@
     <string name="close">close</string>
     <string name="add_new_products">Add new products</string>
     <string name="add_new_shop">Add new shop</string>
-    <string name="no_of_pending_request">No of pending request</string>
-    <string name="no_of_request_accepted">No of request accepted</string>
+    <string name="no_of_pending_request">No of pending request : </string>
+    <string name="no_of_request_accepted">No of request accepted : </string>
     <string name="product_name">Product Name</string>
     <string name="shop_name_or_owner_name">Shop name (or) Owner name</string>
     <string name="price">Price</string>
@@ -81,6 +81,8 @@
     <string name="sub_category">Sub category</string>
     <string name="product_image">Product Image</string>
     <string name="description">Description</string>
+    <string name="no_shops_added">No Shops added</string>
+    <string name="computer_and_its_accessories">Computer and its accessories</string>
 
     <string-array name="main_category">
         <item>Clothing</item>

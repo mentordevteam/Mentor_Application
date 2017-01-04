@@ -83,12 +83,12 @@ FragmentTransaction fragmentTransaction;
                 break;
             case R.id.nav_header_profile:
                 fragmentTransaction=getSupportFragmentManager().beginTransaction();
-                fragmentTransaction.add(R.id.main_drawer_layout,new Fragment_profile(),"Profile").commit();
+                fragmentTransaction.add(R.id.main_drawer_layout_seller,new Fragment_profile(),"Profile").commit();
                 item.isChecked();
                 break;
             case R.id.nav_header_settings:
                 fragmentTransaction=getSupportFragmentManager().beginTransaction();
-                fragmentTransaction.replace(R.id.main_drawer_layout,new Fragment_settings(),"Settings").commit();
+                fragmentTransaction.replace(R.id.main_drawer_layout_seller,new Fragment_settings(),"Settings").commit();
                 item.isChecked();
                 break;
             case R.id.nav_header_logout:
