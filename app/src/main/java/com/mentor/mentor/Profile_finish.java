@@ -2,6 +2,7 @@ package com.mentor.mentor;
 
 import android.Manifest;
 import android.content.*;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.location.Address;
@@ -21,6 +22,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.*;
+import com.android.volley.toolbox.Volley;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -28,8 +36,10 @@ import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
 
 import java.io.IOException;
+import java.util.Hashtable;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 
 public class Profile_finish extends AppCompatActivity implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
 
@@ -40,6 +50,11 @@ public class Profile_finish extends AppCompatActivity implements GoogleApiClient
     Location location;
     GoogleApiClient googleApiClient;
 
+    String cityname="";
+    String state="";
+
+    String latitude="";
+    String longitude="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -53,7 +68,7 @@ public class Profile_finish extends AppCompatActivity implements GoogleApiClient
 
         buildGoogleApiClient();
 
-        android.content.SharedPreferences sharedPreferences=getSharedPreferences("mentor", Context.MODE_APPEND);
+        /*android.content.SharedPreferences sharedPreferences=getSharedPreferences("mentor", Context.MODE_APPEND);
         String s=sharedPreferences.getString("login_status","default");
         switch (s)
         {
@@ -71,7 +86,7 @@ public class Profile_finish extends AppCompatActivity implements GoogleApiClient
             }
             default:
                 break;
-        }
+        }*/
 
     }
 
@@ -136,6 +151,8 @@ public class Profile_finish extends AppCompatActivity implements GoogleApiClient
         {
             double latitude = location.getLatitude();
             double longitude = location.getLongitude();
+            this.latitude=String.valueOf(latitude);
+            this.longitude=String.valueOf(longitude);
 
             Geocoder geocoder = new Geocoder(this, Locale.getDefault());
             List<Address> addresses = null;
@@ -164,6 +181,7 @@ public class Profile_finish extends AppCompatActivity implements GoogleApiClient
             }
 
             textView1.setText(cityname);
+            this.cityname=cityname;
             get=get.trim();
             c=get.toCharArray();
             for(int i=j+1;i<c.length-6;i++)
@@ -171,6 +189,7 @@ public class Profile_finish extends AppCompatActivity implements GoogleApiClient
                 State+=c[i];
             }
             textView2.setText(State);
+            this.state=State;
         }
 
     }
@@ -182,5 +201,11 @@ public class Profile_finish extends AppCompatActivity implements GoogleApiClient
 
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
+    }
+
+    public void go_to_access(final View view)
+    {
+        final SharedPreferences sharedPreferences=getSharedPreferences("mentor",Context.MODE_PRIVATE);
+
     }
 }

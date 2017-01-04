@@ -4,15 +4,24 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:scrollHorizontally="false"
-    android:background="@android:color/white"
+    android:background="@android:color/transparent"
     android:id="@+id/edit_text_layout"
     android:gravity="top|center_horizontal">
+    <!--<ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/button_back_search"
+        android:src="@drawable/ic_back"
+        android:contentDescription="@string/search_here"
+        android:background="@android:color/transparent"/>-->
         <EditText
+            android:background="@android:color/transparent"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:id="@+id/edit_text_search"
             android:hint="@string/search_here"
-            android:textColorHint="@android:color/background_dark"
-            android:layout_gravity="center" />
+            android:textColorHint="@android:color/white"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center"/>
 
     </RelativeLayout>

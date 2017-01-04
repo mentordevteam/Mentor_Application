@@ -12,6 +12,17 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.*;
+
+import java.util.Hashtable;
+import java.util.Map;
+import java.util.regex.Pattern;
+
 public class Login extends AppCompatActivity
 {
     EditText username,password;
@@ -39,31 +50,62 @@ public class Login extends AppCompatActivity
         finish();
     }
 
-    public void go_to_home(View view)
+    public void go_to_home(final View view)
     {
-        if(username_valid.equals("yes")&&password_valid.equals("yes"))
-        {
-            if(username_value.equals("9876543210")&&password_value.equals("mentoradmin"))
-            {
-                Custom_Toast c=new Custom_Toast(getApplicationContext(),view,getLayoutInflater());
-                c.show("Login Successful");
-
-                new com.mentor.mentor.SharedPreferences(getApplicationContext()).set("login_status","yes");
-
-                Intent i=new Intent(getApplicationContext(),MainActivity.class);
-                startActivity(i);
-                finish();
-            }
-            else
-            {
-                Custom_Toast c=new Custom_Toast(getApplicationContext(),view,getLayoutInflater());
-                c.show("Invalid credentials");
-            }
-        }
-        else
+        if(username.getText().toString().equals("9876543210")&&password.getText().toString().equals("mentoradmin"))
         {
             Custom_Toast c=new Custom_Toast(getApplicationContext(),view,getLayoutInflater());
-            c.show("Invalid credentials");
+            c.show("Login Successful");
+
+            new com.mentor.mentor.SharedPreferences(getApplicationContext()).set("login_status","yes");
+
+            Intent i=new Intent(getApplicationContext(),MainActivity.class);
+            startActivity(i);
+            finish();
+        }
+        else {
+            StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://192.168.1.9:8000/user_login", new Response.Listener<String>() {
+                @Override
+                public void onResponse(String response) {
+                    if (response.equals("success")) {
+
+                        finish();
+
+                        SharedPreferences sharedPreferences = getSharedPreferences("mentor", Context.MODE_PRIVATE);
+                        String s = sharedPreferences.getString("profile", "default");
+                        if (s.equals("default"))
+                        {
+                            new com.mentor.mentor.SharedPreferences(getApplicationContext()).set("profile", "go");
+                            Intent intent = new Intent(getApplicationContext(), Profile_finish.class);
+                            startActivity(intent);
+                            finish();
+                        }
+                        else
+                        {
+                            new com.mentor.mentor.SharedPreferences(getApplicationContext()).set("login_status","yes");
+                            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                            startActivity(intent);
+                        }
+                    } else {
+                        new Custom_Toast(getApplicationContext(), view, getLayoutInflater()).show("Invalid credentials");
+                    }
+                }
+            }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    new Custom_Toast(getApplicationContext(), view, getLayoutInflater()).show(error.toString());
+                }
+            }) {
+                @Override
+                protected Map<String, String> getParams() throws AuthFailureError {
+                    Map<String, String> stringMap = new Hashtable<>();
+                    stringMap.put("phone", username.getText().toString());
+                    stringMap.put("password", password.getText().toString());
+                    return stringMap;
+                }
+            };
+            RequestQueue requestQueue = com.android.volley.toolbox.Volley.newRequestQueue(this);
+            requestQueue.add(stringRequest);
         }
     }
 
@@ -76,7 +118,7 @@ public class Login extends AppCompatActivity
             public void onFocusChange(View view, boolean b) {
                 if(!b)
                 {
-                    if(username.getText().toString().length()<10)
+                    if(username.getText().toString().length()!=10)
                     {
                         username.setError("Invalid Mobile No");
                     }

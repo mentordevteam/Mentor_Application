@@ -9,8 +9,10 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#1e000000"
-        android:padding="15sp">
+        android:background="#fe037434"
+        android:padding="15sp"
+        android:id="@+id/layout_pinlock"
+        android:layout_marginTop="3sp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -31,4 +33,91 @@
             android:layout_alignParentEnd="true" />
     </RelativeLayout>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fe037434"
+        android:padding="15sp"
+        android:layout_marginTop="3sp"
+        android:layout_below="@+id/layout_pinlock"
+        android:id="@+id/layout_notification">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/notification"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:id="@+id/text_view_notification"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_view_notification"
+            android:text="@string/turn_off_notifications_from_the_app"/>
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fe037434"
+        android:padding="15sp"
+        android:layout_below="@+id/layout_notification"
+        android:layout_marginTop="3sp"
+        android:id="@+id/layout_help">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/help"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:id="@+id/text_view_help"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_view_help"
+            android:text="@string/see_the_guide_of_our_app"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_proceed_arrow"
+            android:contentDescription="@string/help"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fe037434"
+        android:padding="15sp"
+        android:layout_below="@+id/layout_help"
+        android:layout_marginTop="3sp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/about_app"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:id="@+id/text_view_about_app"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_view_about_app"
+            android:text="View about our app"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_proceed_arrow"
+            android:contentDescription="@string/help"/>
+    </RelativeLayout>
 </RelativeLayout>

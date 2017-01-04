@@ -34,18 +34,6 @@
     <string name="switch_as_a_dealer">Switch as a seller</string>
     <string name="online_shop">Online shop</string>
 
-    <string-array name="names">
-        <item>waseem</item>
-        <item>waseem</item>
-        <item>waseem</item>
-        <item>waseem</item>
-        <item>waseem</item>
-        <item>waseem</item>
-        <item>waseem</item>
-        <item>waseem</item>
-    </string-array>
-
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="view_products">View Products</string>
     <string name="upload_image">Upload_Image</string>
@@ -81,4 +69,28 @@
     <string name="change_password">Change Password</string>
     <string name="like">Likes</string>
     <string name="_0">0</string>
+    <string name="search">Search</string>
+    <string name="back">Back</string>
+    <string name="turn_off_notifications_from_the_app">Turn off notifications from the app</string>
+    <string name="notification">Notification</string>
+    <string name="help">Help</string>
+    <string name="see_the_guide_of_our_app">See the guide of our app</string>
+    <string name="about_app">About app</string>
+    <string name="no_of_years_used">No of years used</string>
+    <string name="category">Category</string>
+    <string name="sub_category">Sub category</string>
+    <string name="product_image">Product Image</string>
+    <string name="description">Description</string>
+
+    <string-array name="main_category">
+        <item>Clothing</item>
+        <item>Automobiles</item>
+        <item>Electronics</item>
+        <item>Home Appliances</item>
+        <item>Sports</item>
+        <item>Toys</item>
+        <item>Bags</item>
+        <item>Books and Media</item>
+        <item>Gaming</item>
+    </string-array>
 </resources>

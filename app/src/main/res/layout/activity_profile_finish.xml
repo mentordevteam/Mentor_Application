@@ -147,7 +147,8 @@
             android:layout_margin="10sp"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:id="@+id/button_profile_finish"/>
+            android:id="@+id/button_profile_finish"
+            android:onClick="go_to_access"/>
     </RelativeLayout>
 
 </LinearLayout>

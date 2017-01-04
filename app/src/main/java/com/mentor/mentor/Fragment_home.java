@@ -104,9 +104,9 @@ public class Fragment_home extends Fragment
             private TextView textView_title;
             private TextView textView_shopname;
             private ImageView imageView_product_image;
-            ViewHolder(View view) {
+            ViewHolder(View view)
+            {
                 super(view);
-
                 textView_shopname= (TextView) view.findViewById(R.id.text_view_shop_name_recycler_view);
                 textView_title= (TextView) view.findViewById(R.id.text_view_title_vertical_recycler);
                 imageView_product_image= (ImageView) view.findViewById(R.id.image_view_recycler_view);
